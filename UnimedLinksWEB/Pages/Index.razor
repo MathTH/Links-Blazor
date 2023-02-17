@@ -1,0 +1,42 @@
+﻿@page "/"
+@page "/index"
+@using SiteModels.DTOS
+@using UnimedLinksWEB.Pages.Componentes
+@using UnimedLinksWEB.Services
+
+@inject InterfaceSite _interfaceSite
+
+
+<PageTitle>Unimed Barretos</PageTitle>
+
+@if(Sites == null)
+{
+    <h1 class="text-danger">Seus sites estão nulos</h1>
+}
+else
+{
+    @if(Sites.Count() > 0)
+    {
+           <CardsLinks Sites = "@Sites"></CardsLinks>  
+           
+           var siteConsulta = from site in Sites
+                           group site by site.Id into siteBusca
+                           orderby siteBusca.Key
+                           select siteBusca;
+
+@*        foreach(siteGrupo in siteConsulta)
+        {
+            
+        }*@
+    }
+}
+
+
+@code
+{
+    public IEnumerable<SiteDTO>? Sites { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Sites = await _interfaceSite.VisualizarSites();
+    }
+}

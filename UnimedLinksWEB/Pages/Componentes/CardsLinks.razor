@@ -1,0 +1,49 @@
+﻿@using SiteModels.DTOS
+
+
+<div class="container">    
+        <div class="row">          
+
+            @foreach (var site in Sites)
+{  
+ 
+ 
+    
+             
+            <div class="card mb-3" style="width: 320px;height: 180px;">
+              
+                      
+                <div class="row g-0">
+                    
+                        <div class="col-md-4">
+                                <a href="@site.UrlDoSite" target="_blank">
+                                    <img src="@site.ImagemDoSite" />
+                                </a>
+
+                            </div>
+                          
+                            <div class="col-md-8">
+                                  
+
+                                <div class="card-body">
+
+                                    <h5 class="card-title">@site.NomeDoSite</h5>
+                                    <p class="card-text">@site.DescricaoDoSite</p>
+
+                                    <a href="@site.UrlDoSite" target="_blank">
+                                        <button type="button" class="btn btn-success">Acessar Site</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+}
+
+        </div>
+        </div>
+
+
+@code {
+    [Parameter]
+    public IEnumerable<SiteDTO>? Sites { get; set; }
+}

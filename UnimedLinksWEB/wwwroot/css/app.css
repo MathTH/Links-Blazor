@@ -1,0 +1,139 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+    header .container {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-decoration: none;
+    }
+
+/* Colocar os elementos que estão dentro da classe cards-menu, todos em um mesmo tamanho respeitando o espaço entre eles */
+.cards-menu {
+    padding: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.text-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+
+
+/* Os cards do meu header, vão ficar todos do mesmo tamanho */
+
+
+
+/* Quero que meus elementos dentro do container, tenham um espaçamento entre eles*/
+.container {
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+    .container .card {
+        position: relative;
+        background-color: white;
+        margin: -0 auto;
+        border: 1px solid #bdc3c7;
+        border-radius: 40px;
+        overflow: hidden;
+        text-align: center;
+        margin-left: 30 auto;
+        margin-right: 30px;
+    }
+
+        .container .card img {
+            transition: 0.10s;
+        }
+
+
+        .container .card h1 {
+            font-size: 2rem;
+        }
+
+        .container .card .content {
+            text-align: center;
+        }
+
+            .container .card .content p {
+                transition: 0.1s;
+            }
+
+            .container .card .content a {
+                position: relative;
+                display: inline-block;
+                background-color: #00995D;
+                color: white;
+                border-radius: 700px;
+                text-decoration: none;
+                outline: none;
+                margin-top: 10px;
+            }
+
+        .container .card:hover {
+            color: black;
+            box-shadow: 1px 5px 10px #ecf0f1;
+            border-color: #00995D;
+        }
+
+
+
+            .container .card:hover .content a {
+                color: white;
+                background-color: #00401A;
+            }
+
+
+.imagem-cards {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 3px solid #B1D34B;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Tirar a decoração do link*/
+a {
+    text-decoration: none;
+}
+
+
+/*Deixar todos os itens que estão dentro da minha class .pai alinhados no centro ambos com os mesmos tamanho*/
+.pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    margin: 0 auto;
+}
